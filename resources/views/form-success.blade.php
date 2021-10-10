@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-<p>  {{$eventName}}</p>
-<p>  {{$bandNames}}</p>
-<p>   {{$startDate}}</p>
+<p>{{$eventName}}</p>
+<p>{{$bandNames}}</p>
+<p>{{$startDate}}</p>
 <p>{{$endDate}}</p>
 <p>{{$portfolio}}</p>
-<p>{{$ticketPrice}}</p>
+<p>{{$ticketPrice}}
 @switch($status)
     @case(1)
     <p>Đang diễn ra</p>

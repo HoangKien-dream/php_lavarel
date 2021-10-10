@@ -17,7 +17,17 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get("/data-handle/{id}/path", [DataHandleController::class,'handlePathVariable']);
-Route::get("/data-handle/query-string", [DataHandleController::class,'handleQueryString']);
-Route::get("/data-handle/form", [DataHandleController::class,'handleForm']);
-Route::post("/data-handle/form", [DataHandleController::class,'processForm']);
+
+Route::get("/data-handle/{id}/path",[DataHandleController::class,'handlePathVariable']);
+Route::get("/data-handle/query-string",[DataHandleController::class,'handleQueryString']);
+Route::get("/data-handle/form",[DataHandleController::class,'handleForm']);
+Route::post("/data-handle/form",[DataHandleController::class,'processForm']);
+Route::get("demo/layout", function (){
+   return view("admin/template/layout");
+});
+Route::get("demo/form", function (){
+   return view("admin/template/form");
+});
+Route::get("demo/table", function (){
+    return view("admin/template/table");
+});

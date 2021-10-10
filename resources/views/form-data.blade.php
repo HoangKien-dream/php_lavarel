@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Form</h1>
-<form action="" method = "post">
+<form action="" method="post">
     @csrf
     <div>
         eventName <input type="text" name="eventName">
