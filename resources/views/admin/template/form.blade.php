@@ -3,7 +3,8 @@
 @section('form-layout')
 <div class="row">
     <div class="col-md-12">
-        <form id="form" action="forms-validation.html" class="form-horizontal">
+        <form id="form" action=" " method="post" class="form-horizontal">
+            @csrf
             <section class="panel">
                 <header class="panel-heading">
                     <div class="panel-actions">
@@ -18,35 +19,45 @@
                 </header>
                 <div class="panel-body">
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Full Name <span class="required">*</span></label>
+                        <label class="col-sm-3 control-label">Event Name<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="text" name="fullname" class="form-control" placeholder="eg.: John Doe" required/>
+                            <input type="text" name="eventName" class="form-control" required/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Email <span class="required">*</span></label>
+                        <label class="col-sm-3 control-label">Band Names<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <div class="input-group">
-													<span class="input-group-addon">
-														<i class="fa fa-envelope"></i>
-													</span>
-                                <input type="email" name="email" class="form-control" placeholder="eg.: email@email.com" required/>
-                            </div>
-                        </div>
-                        <div class="col-sm-9">
-
+                            <input type="text" name="bandNames" class="form-control" required/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">GitHub</label>
+                        <label class="col-sm-3 control-label">Start Date<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="url" name="github" class="form-control" placeholder="eg.: https://github.com/johndoe" />
+                            <input type="date" name="startDate" class="form-control" required/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Skills <span class="required">*</span></label>
+                        <label class="col-sm-3 control-label">End Date<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <textarea name="skills" rows="5" class="form-control" placeholder="Describe your skills" required></textarea>
+                            <input type="date" name="endDate" class="form-control" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Portfolio<span class="required">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="text" name="portfolio" class="form-control" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Ticket Price<span class="required">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="text" name="ticketPrice" class="form-control" required/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Status<span class="required">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="number" name="status" class="form-control" required/>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DataHandleController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,14 +21,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/data-handle/{id}/path",[DataHandleController::class,'handlePathVariable']);
 Route::get("/data-handle/query-string",[DataHandleController::class,'handleQueryString']);
-Route::get("/data-handle/form",[DataHandleController::class,'handleForm']);
-Route::post("/data-handle/form",[DataHandleController::class,'processForm']);
+//Route::get("/data-handle/form",[DataHandleController::class,'handleForm']);
+//Route::post("/data-handle/form",[DataHandleController::class,'processForm']);
+
 Route::get("demo/layout", function (){
    return view("admin/template/layout");
 });
-Route::get("demo/form", function (){
-   return view("admin/template/form");
-});
-Route::get("demo/table", function (){
-    return view("admin/template/table");
-});
+//Route::get("demo/form", function (){
+//   return view("admin/template/form");
+//});
+//Route::get("demo/table", function (){
+//    return view("admin/template/table");
+//});
+Route::get("demo/database",[ProductController::class,'demo']);
+Route::get("demo/database2",[ProductController::class,'demo2']);
+
+Route::get("/event/form",[\App\Http\Controllers\EventController::class,'getForm']);
+Route::post("/event/form",[\App\Http\Controllers\EventController::class,'insertDB']);
+Route::get('event/table',[\App\Http\Controllers\EventController::class,'getAll']);
+Route::get("event/detail/{eventName}",[\App\Http\Controllers\EventController::class,'getDetail']);

@@ -17,72 +17,34 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>Event Name</th>
+                        <th>Band Names</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Portfolio</th>
+                        <th>TicketPrice</th>
+                        <th>Status</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($list as $item)
                     <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{{$item->id}}</td>
+                        <td>{{$item->eventName}}</td>
+                        <td>{{$item->bandNames}}</td>
+                        <td>{{$item->startDate}}</td>
+                        <td>{{$item->endDate}}</td>
+                        <td>{{$item->portfolio}}</td>
+                        <td>{{$item->ticketPrice}}</td>
+                        <td>{{$item->status}}</td>
+                        <td>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                            <a style="padding-left: 5px" href="detail"><i class="fa fa-pencil"></i></a>
+                            <a href="#"><i class="far fa-sticky-note"></i></a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -20,7 +20,7 @@ class DataHandleController extends Controller
         ]);
     }
     public function  handleForm(){
-        return view('form-data');
+        return view('admin/template/form');
     }
     public function  processForm(Request  $request){
         $eventName = $request->get("eventName");
@@ -30,7 +30,7 @@ class DataHandleController extends Controller
         $portfolio = $request->get("portfolio");
         $ticketPrice = $request->get("ticketPrice");
         $status = $request->get("status");
-        return view('form-success',[
+        return view('admin/template/table', [
             'eventName' => $eventName,
             'bandNames' => $bandNames,
             'startDate' => $startDate,
