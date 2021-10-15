@@ -22,7 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('portfolio');
             $table->double('ticketPrice');
             $table->integer('status');
-            $table->date('deleteAt')->default(null);
+            $table->date('deleteAt');
             $table->timestamps();
         });
     }

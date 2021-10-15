@@ -40,8 +40,8 @@
                         <td>{{$item->status}}</td>
                         <td>
                             <a href="#"><i class="fa fa-trash-o"></i></a>
-                            <a style="padding-left: 5px" href="detail"><i class="fa fa-pencil"></i></a>
-                            <a href="#"><i class="far fa-sticky-note"></i></a>
+                            <a style="padding-left: 5px"href="/event/update/{{$item->id}}"><i class="fa fa-pencil"></i></a>
+                            <a style="padding-left: 5px" href="/event/detail/{{$item->id}}"><i class="fa fa-info"></i></a>
                         </td>
                     </tr>
                     @endforeach

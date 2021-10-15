@@ -4,22 +4,22 @@
     <div class="row">
         <div class="col-md-12">
            <div>
-               Event Name: {{$eventName}}
+               Event Name: {{$items->eventName}}
            </div>
             <div>
-                Band Name: {{$bandNames}}
+                Band Name: {{$items->bandNames}}
             </div>
             <div>
-                Start Date: {{$startDate}}
+                Start Date: {{$items->startDate}}
             </div>
             <div>
-                End Date: {{$endDate}}
+                End Date: {{$items->endDate}}
             </div>
             <div>
-                Portfolio: {{$portfolio}}
+                Portfolio: {{$items->portfolio}}
             </div>
             <div>
-                Ticket Price: {{$ticketPrice}}
+                Ticket Price: {{$items->ticketPrice}}
             </div>
         </div>
         <!-- col-md-6 -->
